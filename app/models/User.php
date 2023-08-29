@@ -3,14 +3,12 @@
 namespace App\Models;
 
 use Core\Model;
-use Core\Database;
 
 class User extends Model {
     private $db;
-
-    public function __construct() {
-        $this->db = new Database();
-    }
+    /**
+     * The parent Model class has already instantiated the Database class.
+     */
 
     /**
      * Fetch all users from the database.
