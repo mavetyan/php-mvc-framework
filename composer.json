@@ -1,0 +1,14 @@
+{
+    "name": "user/simple-mvc",
+    "description": "A simple MVC framework.",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/",
+            "Config\\": "config/"
+        }
+    }
+}
