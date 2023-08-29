@@ -4,8 +4,9 @@ namespace Core;
 use PDO;
 use PDOException;
 use Config\Config;
+use Core\Interfaces\DatabaseInterface;
 
-class Database {
+class Database implements DatabaseInterface {
     private $host = Config::DB_HOST;
     private $user = Config::DB_USER;
     private $pass = Config::DB_PASSWORD;

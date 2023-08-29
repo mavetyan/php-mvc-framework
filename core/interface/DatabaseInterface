@@ -1,0 +1,62 @@
+<?php
+namespace Core\Interfaces;
+
+/**
+ * Interface defining the contract for database operations.
+ */
+interface DatabaseInterface {
+
+    /**
+     * Prepares a SQL statement for execution.
+     *
+     * @param string $sql The SQL statement to prepare.
+     * @return mixed Prepared statement.
+     */
+    public function prepare($sql);
+
+    /**
+     * Binds values to the prepared statement.
+     *
+     * @param string $param The parameter to bind.
+     * @param mixed $value The value to bind.
+     * @param mixed $type (Optional) The data type of the parameter.
+     * @return void
+     */
+    public function bind($param, $value, $type = null);
+
+    /**
+     * Executes the prepared statement.
+     *
+     * @return bool True on success, false on failure.
+     */
+    public function execute();
+
+    /**
+     * Prepares and executes an SQL statement.
+     *
+     * @param string $sql The SQL statement to execute.
+     * @return mixed Result set.
+     */
+    public function query($sql);
+
+    /**
+     * Fetches all results from a SELECT statement.
+     *
+     * @return array List of results.
+     */
+    public function resultSet();
+
+    /**
+     * Fetches a single result from a SELECT statement.
+     *
+     * @return array Single result row.
+     */
+    public function single();
+
+    /**
+     * Returns the number of rows affected by the last DELETE, INSERT, or UPDATE statement.
+     *
+     * @return int Number of affected rows.
+     */
+    public function rowCount();
+}

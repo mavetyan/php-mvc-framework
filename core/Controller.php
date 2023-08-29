@@ -2,7 +2,7 @@
 
 namespace Core;
 
-class Controller {
+abstract class Controller {
     /**
      * Load a model class.
      *
